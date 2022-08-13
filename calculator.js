@@ -2,13 +2,38 @@ let a = "0";
 let b = undefined;
 let operator = "";
 
-const result = document.getElementById("result");
-const formula = document.getElementById("formula");
+let result = document.getElementById("result");
+let formula = document.getElementById("formula");
 
-function clear(){
+function clearScreen(){
     a = "0";
     b = undefined;
     operator = "";
-    result.innerText = "0";
-    formula.innerText = "";
+    result.textContent = "0";
+    formula.textContent = "";
+}
+
+function backSpace(){
+    if(result.textContent === "0"){
+        return;
+    }
+
+    if(result.textContent.length === 1){
+        result.textContent = "0";
+    }
+    else{
+        result.textContent = result.textContent.slice(0, -1);
+    }
+}
+
+function enterDigit(val){
+    if(result.textContent === "0" && val !== "."){
+        result.textContent = val;
+    }
+    else{
+        if(val === "." && result.textContent.includes(".")){
+            return;
+        }
+        result.textContent += val;
+    }
 }
