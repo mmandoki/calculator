@@ -2,7 +2,7 @@ let a = 0;
 let b = 0;
 let operator = "";
 let justCalculated = false;
-const maxDigits = 12;
+const maxDigits = 8;
 
 let result = document.getElementById("result");
 let formula = document.getElementById("formula");
@@ -57,7 +57,6 @@ function enterOperator(op){
     result.textContent = "0";
 }
 
-// × ÷
 function calculate(){
     b = parseFloat(result.textContent);
 
@@ -74,29 +73,37 @@ function calculate(){
     else if(operator === "+"){
         formula.textContent += " " + result.textContent + " =";
         result.textContent = a + b;
-        result.textContent = result.textContent.slice(0, maxDigits);
+        trimResult();
         justCalculated = true;
         operator = "";
     }
     else if(operator === "-"){
         formula.textContent += " " + result.textContent + " =";
         result.textContent = a - b;
-        result.textContent = result.textContent.slice(0, maxDigits);
+        trimResult();
         justCalculated = true;
         operator = "";
     }
     else if(operator === "×"){
         formula.textContent += " " + result.textContent + " =";
         result.textContent = a * b;
-        result.textContent = result.textContent.slice(0, maxDigits);
+        trimResult();
         justCalculated = true;
         operator = "";
     }
     else if(operator === "÷"){
         formula.textContent += " " + result.textContent + " =";
         result.textContent = a / b;
-        result.textContent = result.textContent.slice(0, maxDigits);
+        trimResult();
         justCalculated = true;
         operator = "";
     }
+}
+
+function trimResult(){
+    if(result.textContent.length <= maxDigits){
+        return;
+    }
+    let value = parseFloat(result.textContent);
+    result.textContent = value.toExponential(maxDigits);
 }
