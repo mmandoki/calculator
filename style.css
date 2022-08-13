@@ -42,8 +42,21 @@ body {
     justify-content: center;
 }
 
-#display {
+.display {
     background-color: white;
     margin: 50px 30px 30px 30px;
     height: 100px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 26px;
+}
+
+#formula {
+    font-size: 30px;
+}
+
+#result {
+    font-size: 56px;
 }
