@@ -17,32 +17,32 @@
         <div class="row">
             <input type="button" class="button spacer">
             <input type="button" class="button spacer">
-            <input type="button" class="button" value="C" onclick="clearScreen()">
-            <input type="button" class="button" value="⌫" onclick="backSpace()">
+            <input type="button" class="button" value="C" onclick="clearScreen();">
+            <input type="button" class="button" value="⌫" onclick="backSpace();">
         </div>
         <div class="row">
             <input type="button" class="button" value="7" onclick="enterDigit('7');">
             <input type="button" class="button" value="8" onclick="enterDigit('8');">
             <input type="button" class="button" value="9" onclick="enterDigit('9');">
-            <input type="button" class="button" value="÷">
+            <input type="button" class="button" value="÷" onclick="enterOperator('÷');">
         </div>
         <div class="row">
             <input type="button" class="button" value="4" onclick="enterDigit('4');">
             <input type="button" class="button" value="5" onclick="enterDigit('5');">
             <input type="button" class="button" value="6" onclick="enterDigit('6');">
-            <input type="button" class="button" value="×">
+            <input type="button" class="button" value="×" onclick="enterOperator('×');">
         </div>
         <div class="row">
             <input type="button" class="button" value="1" onclick="enterDigit('1');">
             <input type="button" class="button" value="2" onclick="enterDigit('2');">
             <input type="button" class="button" value="3" onclick="enterDigit('3');">
-            <input type="button" class="button" value="-">
+            <input type="button" class="button" value="-" onclick="enterOperator('-');">
         </div>
         <div class="row">
             <input type="button" class="button" value="0" onclick="enterDigit('0');">
             <input type="button" class="button" value="." onclick="enterDigit('.');">
-            <input type="button" class="button" value="=">
-            <input type="button" class="button" value="+">
+            <input type="button" class="button" value="=" onclick="calculate();">
+            <input type="button" class="button" value="+" onclick="enterOperator('+');">
         </div>
     </div>
 </body>
