@@ -30,6 +30,7 @@ body {
     display: inline-block;
     text-align: center;
     line-height: 100px;
+    border-radius: 10%;
 }
 
 .row .button.spacer {
@@ -51,6 +52,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 8px 26px;
+    border-radius: 4%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
 }
 
 #formula {
